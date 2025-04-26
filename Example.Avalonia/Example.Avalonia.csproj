@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<!--Note: Dotnet currently does not allow to build on non-windows platforms when a windows TFM is specified-->
+	<PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
+		<TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <TargetFrameworks>net8.0-windows10.0.26100.0</TargetFrameworks>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<LangVersion>8.0</LangVersion>
+		<OutputType>WinExe</OutputType>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="11.2.8" />
+		<PackageReference Include="Avalonia.Desktop" Version="11.2.8" />
+		<PackageReference Include="Avalonia.Diagnostics" Version="11.2.8" />
+		<PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.8" />
+		<PackageReference Include="CommunityToolkit.WinUI.Notifications" Version="7.1.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\DesktopNotifications.Avalonia\DesktopNotifications.Avalonia.csproj" />
+	</ItemGroup>
+</Project>
