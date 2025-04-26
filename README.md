@@ -1,6 +1,7 @@
 # ToastNotifier
 
 This is a fork of DesktopNotification - updated and retarget for Dotnet 8.0. 
+[Desktop Notifications](https://github.com/pr8x/DesktopNotifications)
 
 A cross-platform C# library for native desktop "toast" notifications.
 
